@@ -14,7 +14,8 @@ export default function App() {
         .then((response) => response.json())
         .then((response) => {
           setInfor(response);
-
+          console.log(text);
+          
         });
     }
 
