@@ -5,14 +5,14 @@ const SearchInput = ({ value, onChange }) => {
     onChange(event.target.value);
   }
   return (
-    <div className="row">
-      <div className="col-md-6 d-flex justify-content-center">
+    <div className="row d-flex justify-content-center">
+      <div className="col-md-8">
         <input
           type="search"
           value={value}
           onChange={handleChange}
           className="form-control p-3 m-5"
-          placeholder="DDigite o nome do anime a ser pesquisado"
+          placeholder="Digite o nome do anime que será pesquisado"
         />
       </div>
     </div>
