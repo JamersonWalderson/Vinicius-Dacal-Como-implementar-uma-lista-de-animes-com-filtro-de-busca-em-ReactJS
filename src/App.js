@@ -22,17 +22,26 @@ export default function App() {
   }, [text]);
 
   return (
-    <div className="App">
+    <div className="App container">
       <h1>Animes</h1>
       <SearchInput value={text} onChange={(search) => setText(search)} />
       {info.data && (
-        <ul>
+        <div className="row">
           {info.data.map((anime) => (
-            <li key={anime.id}>
-              {anime.attributes.canonicalTitle}
-            </li>
+            <div className="col-md-3" key={anime.id}>
+              <div className="">
+                <img
+                  src={anime.attributes.posterImage.small}
+                  className="img-fluid"
+                  alt={anime.attributes.canonicalTitle}
+                />
+                <div className="card-body">
+                  <p className="card-text fw-bold fs-5">{anime.attributes.canonicalTitle}</p>
+                </div>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
