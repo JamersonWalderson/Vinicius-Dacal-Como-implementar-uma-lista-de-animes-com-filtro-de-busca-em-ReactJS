@@ -22,7 +22,7 @@ export default function App() {
   }, [text]);
 
   return (
-    <div className="App container">
+    <div className="App container-fluid">
       <h1>Animes</h1>
       <SearchInput value={text} onChange={(search) => setText(search)} />
       {info.data && (
